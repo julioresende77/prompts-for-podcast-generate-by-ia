@@ -66,7 +66,12 @@ Utilize os prompts dentro do link do `Notion` fornecido na parte de `Materiais` 
 
 ## ✅ Podcast - Código Oculto - Os segredos do lado ninja da tecnologia
 
-- [Link do Site](https://codecastcodigo-oculto.vercel.app/)
+<a href="https://codecastcodigo-oculto.vercel.app/">
+    <img 
+        src="./assets/site-podcast.png" 
+        alt="Código Oculto">
+</a>
+
 - [Link do podcast no SoundCloud](https://soundcloud.com/julio-cesar-de-oliveira-resende/codigo-oculto-os-segredos-do-lado-ninja-da-tecnologia-ep01)
 
 ## 👨‍💻 Expert
