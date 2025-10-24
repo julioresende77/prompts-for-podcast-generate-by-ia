@@ -1,52 +1,98 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon-16x16.png"
+    />
 
-  <link rel="stylesheet" href="./src/css/style.css">
-  <script defer src="./src/js/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
 
-  <title>Codecast - Código Oculto</title>
-</head>
-<body>
-  <main>
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <script defer src="./src/js/script.js"></script>
 
-    <section class="section-intro">
-      <h1>Code<span class="highlight">cast</span> - <span class="highlight">Código</span> Oculto</h1>
-      <h2>Os segredos do lado ninja da tecnologia</h2>
-      <p>Explore os mistérios do <span class="highlight">código</span> e descubra insights <span class="highlight">ocultos</span>.</p>
-    </section>
+    <title>Codecast - Código Oculto</title>
+  </head>
+  <body>
+    <main>
+      <section class="section-intro">
+        <img
+          src="./assets/chatgpt_image_ninja_dev_borda_preta_fundo_transparente_letras_transparente.png"
+          alt="Logo do Ninja Dev"
+          class="logo"
+        />
+        <h1>
+          Code<span class="highlight">cast</span> -
+          <span class="highlight">Código</span> Oculto
+        </h1>
+        <h2>Os segredos do lado ninja da tecnologia</h2>
+        <p>
+          Explore os mistérios do <span class="highlight">código</span> e
+          descubra insights <span class="highlight">ocultos</span>.
+        </p>
+      </section>
 
-    <section class="section-content">
-      <h3>Bem-vindo ao Codecast</h3>
-      <p>Este é o seu portal para desvendar os segredos do desenvolvimento de software, programação e tecnologia. Junte-se a nós enquanto exploramos tópicos fascinantes e compartilhamos conhecimentos valiosos.</p>
-    </section>
+      <section class="section-content">
+        <h3>Bem-vindo ao Codecast</h3>
+        <p>
+          Este é o seu portal para desvendar os segredos do desenvolvimento de
+          software, programação e tecnologia. Junte-se a nós enquanto exploramos
+          tópicos fascinantes e compartilhamos conhecimentos valiosos.
+        </p>
+      </section>
 
-    <section class="podcast-player">
-  <div class="podcast-card">
-    <img src="./assets/imagem-narutodev.png" alt="Capa do Podcast" class="podcast-cover" />
+      <section class="podcast-player">
+        <div class="podcast-card">
+          <img
+            src="./assets/imagem-narutodev.png"
+            alt="Capa do Podcast"
+            class="podcast-cover"
+          />
 
-    <div class="player-overlay">
-      <button id="play-btn" class="play-btn">▶️</button>
+          <div class="player-overlay">
+            <button id="play-btn" class="play-btn">▶️</button>
 
-      <div class="controls">
-        <span id="time-display" class="time-display">▶️00:00</span>
-        <input type="range" id="progress-bar" class="progress-bar" value="0" max="100" />
-      
-      <div class="volume-container">
-          <span id="volume-icon" class="volume-icon">🔊</span>
-          <input type="range" id="volume-bar" class="volume-bar" value="100" max="100" />
+            <div class="controls">
+              <div class="progress-bar-container">
+                <span id="time-display" class="time-display">00:00/00:00</span>
+                <input
+                  type="range"
+                  id="progress-bar"
+                  class="progress-bar"
+                  value="0"
+                  max="100"
+                />
+              </div>
+
+              <div class="volume-container">
+                <span id="volume-icon" class="volume-icon">🔊</span>
+                <input
+                  type="range"
+                  id="volume-bar"
+                  class="volume-bar"
+                  value="100"
+                  max="100"
+                />
+              </div>
+            </div>
+          </div>
+
+          <audio
+            id="podcast-audio"
+            src="./output/codecast_ep01_editado.MP3"
+          ></audio>
         </div>
-      </div>
-    </div>
-
-    <audio id="podcast-audio" src="./output/codecast_ep01_editado.MP3"></audio>
-  </div>
-</section>
-
-  </main>
-</body>
+      </section>
+    </main>
+  </body>
 </html>

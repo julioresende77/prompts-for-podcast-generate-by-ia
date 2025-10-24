@@ -13,20 +13,34 @@ function formatTime(seconds) {
   return `${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
 }
 
-// Atualiza barra e tempo
-audio.addEventListener('timeupdate', () => {
-  const remaining = audio.duration - audio.currentTime;
-  if (!isNaN(remaining)) {
-    timeDisplay.textContent = `▶️${formatTime(remaining)}`;
+// Exibe o tempo total assim que o áudio for carregado
+audio.addEventListener('loadedmetadata', () => {
+  if (audio.duration) {
+    timeDisplay.textContent = `${formatTime(0)}/${formatTime(audio.duration)}`;
   }
-  progressBar.value = (audio.currentTime / audio.duration) * 100;
 });
 
-// Atualiza volume conforme o slider
+// Atualiza barra e tempo conforme o áudio toca
+audio.addEventListener('timeupdate', () => {
+  if (audio.duration) {
+    progressBar.value = (audio.currentTime / audio.duration) * 100;
+
+    // Exibe o tempo decorrido / total
+    timeDisplay.textContent = `${formatTime(audio.currentTime)}/${formatTime(audio.duration)}`;
+  }
+});
+
+// Permitir que o usuário avance ou retroceda o áudio
+progressBar.addEventListener('input', () => {
+  if (audio.duration) {
+    const seekTime = (progressBar.value / 100) * audio.duration;
+    audio.currentTime = seekTime;
+  }
+});
+
+// Controle de volume
 volumeBar.addEventListener('input', () => {
   audio.volume = volumeBar.value / 100;
-
-  // Troca o ícone de acordo com o volume
   if (audio.volume === 0) {
     volumeIcon.textContent = '🔇';
   } else if (audio.volume < 0.5) {
@@ -39,23 +53,15 @@ volumeBar.addEventListener('input', () => {
 // Clique no ícone → mute/unmute
 volumeIcon.addEventListener('click', () => {
   if (!audio.muted) {
-    // Muta o áudio
     lastVolume = audio.volume;
     audio.muted = true;
-    volumeIcon.textContent = '🔇'; // muda o ícone
+    volumeIcon.textContent = '🔇';
     volumeBar.value = 0;
   } else {
-    // Desmuta o áudio
     audio.muted = false;
     audio.volume = lastVolume;
     volumeBar.value = lastVolume * 100;
-
-    // Define o ícone com base no volume anterior
-    if (lastVolume < 0.5) {
-      volumeIcon.textContent = '🔉';
-    } else {
-      volumeIcon.textContent = '🔊';
-    }
+    volumeIcon.textContent = lastVolume < 0.5 ? '🔉' : '🔊';
   }
 });
 

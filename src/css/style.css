@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: code, monospace;
-  font-size: 16px;
   line-height: 1.5;
 }
 
@@ -11,102 +10,89 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-color: #802f00;
-  color: #ffff;
+  color: #fff;
+  min-height: 100vh;
 }
 
 main {
-  max-width: 1920px;
-  height: 100vh;
+  max-width: 1200px;
+  padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 2rem;
 }
 
+/* --- SEÇÃO INTRO --- */
 .section-intro {
-  width: 80%;
-  padding: 10px;
-  background-color: #161616;
+  width: 60%;
+  padding: 1.5rem;
+  text-align: center;
+  text-shadow: 1px 1px 5px #161616;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  border-radius: 20px;
+}
+
+.section-intro .logo {
+  width: 20%;
+  margin: 0 auto;
 }
 
 .section-intro h1 {
-  font-size: 36px;
-  font-weight: bold;
-  padding: 10px;
+  font-size: 2.5rem;
   color: #ffc400;
 }
 
 .section-intro h2 {
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #ff3c00;
+  margin-top: 0.5rem;
 }
 
 .section-intro p {
-  font-size: 18px;
+  font-size: 1.2rem;
   color: #ffc400;
+
+  text-shadow: 1px 1px 2px #161616;
 }
 
-.section-intro h1 .highlight {
+.section-intro .highlight {
   color: #ff3c00;
-  font-size: 36px;
-  font-weight: bold;
 }
 
-.section-intro h2 .highlight {
-  color: #ff3c00;
-  font-size: 36px;
-  font-weight: bold;
-}
-
-.section-intro p .highlight {
-  color: #ff3c00;
-  font-size: 18px;
-}
-
+/* --- SEÇÃO CONTEÚDO --- */
 .section-content {
   width: 50%;
   background-color: #ffc400;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   text-align: center;
-  padding: 20px;
+  padding: 1.5rem;
   text-shadow: 1px 1px 2px #ff3c00;
   border-radius: 20px;
 }
 
 .section-content h3 {
-  font-size: 24px;
-  font-weight: bold;
-  padding: 10px;
+  font-size: 1.5rem;
   color: #161616;
+  margin-bottom: 0.5rem;
 }
 
 .section-content p {
-  font-size: 18px;
-  padding: 10px;
+  font-size: 1rem;
   color: #161616;
 }
 
+/* --- PLAYER --- */
 .podcast-player {
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
 }
 
 .podcast-card {
   position: relative;
-  width: 320px;
-  height: 320px;
+  width: 340px;
+  height: 340px;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(255, 165, 0, 0.4);
@@ -117,19 +103,12 @@ main {
   height: 100%;
   object-fit: cover;
   filter: brightness(0.7);
-  transition: 0.3s ease;
-}
-
-.podcast-card:hover .podcast-cover {
-  filter: brightness(0.9);
+  transition: 0.3s;
 }
 
 .player-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -138,7 +117,6 @@ main {
 
 .play-btn {
   background-color: #ffcc00;
-  color: #111;
   border: none;
   border-radius: 50%;
   width: 60px;
@@ -154,7 +132,7 @@ main {
 }
 
 .controls {
-  width: 80%;
+  width: 90%;
   margin-top: 1rem;
   display: flex;
   justify-content: space-between;
@@ -169,44 +147,116 @@ main {
   cursor: pointer;
 }
 
+.progress-bar-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 0.2rem;
+}
+
 .volume-container {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  width: 80%;
+  justify-content: center;
+  width: 40%;
 }
 
 .volume-icon {
-  font-size: 1.4rem;
   color: #ffcc00;
   cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.volume-icon:hover {
-  color: #ffa500;
-  transform: scale(1.1);
-}
-
-.volume-bar {
-  flex: 1;
-  accent-color: #ff4500;
-}
-
-.volume-icon.muted::after {
-  content: "✖";
-  position: absolute;
-  top: -6px;
-  right: -8px;
-  color: #ff0000;
-  font-size: 0.9rem;
-  font-weight: bold;
 }
 
 .time-display {
+  font-family: "DM Serif Display", serif;
   color: #ff4500;
-  font-family: monospace;
-  font-size: 0.9rem;
-  min-width: 60px;
-  text-align: center;
+  font-size: 0.8rem;
+}
+
+/* --- 📱 RESPONSIVIDADE --- */
+
+/* TABLETS (até 1024px) */
+@media (max-width: 1024px) {
+  .section-intro {
+    width: 90%;
+    padding: 1.2rem;
+  }
+
+  .section-intro h1 {
+    font-size: 2rem;
+  }
+
+  .section-content {
+    width: 80%;
+    padding: 1rem;
+  }
+
+  .podcast-card {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* CELULARES (até 600px) */
+@media (max-width: 600px) {
+  main {
+    gap: 1.5rem;
+  }
+
+  .section-intro {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .section-intro h1 {
+    font-size: 1.4rem;
+  }
+
+  .section-intro h2 {
+    font-size: 1.1rem;
+  }
+
+  .section-intro p {
+    font-size: 0.9rem;
+  }
+
+  .section-content {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .section-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .section-content p {
+    font-size: 0.9rem;
+  }
+
+  .podcast-card {
+    width: 260px;
+    height: 260px;
+  }
+
+  .controls {
+    width: 90%;
+    gap: 0.3rem;
+  }
+
+  .progress-bar-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .time-display {
+    position: absolute;
+    top: -0.8rem;
+    font-family: "DM Serif Display", serif;
+    font-size: 0.8rem;
+  }
+
+  .volume-container {
+    width: 40%;
+  }
 }
