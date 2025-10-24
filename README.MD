@@ -73,20 +73,19 @@ Utilize os prompts dentro do link do `Notion` fornecido na parte de `Materiais` 
       width=80 
       src="https://avatars.githubusercontent.com/u/101299137?s=400&u=09bb47297f7bd213cefe4f69dd5842dcc2bb7e1b&v=4"
     />
-    <p>&nbsp&nbsp&nbspFelipe Aguiar<br>
+    <p>&nbsp&nbsp&nbspNinjaDev<br>
     &nbsp&nbsp&nbsp
-    <a target="_blank" 
-        href="https://github.com/julioresende77">
+    <a href="https://github.com/julioresende77" target="_blank" rel="noopener noreferrer">
         GitHub
     </a>
     &nbsp;|&nbsp;
     <a 
-        href="https://www.linkedin.com/in/resendedev/">
+        href="https://www.linkedin.com/in/resendedev/" target="_blank" rel="noopener noreferrer">
         LinkedIn
     </a>
     &nbsp;|&nbsp;
     <a 
-        href="https://www.instagram.com/resendedev/">
+        href="https://www.instagram.com/resendedev/" target="_blank" rel="noopener noreferrer">
         Instagram
     </a>
     &nbsp;|&nbsp;</p>
