@@ -64,6 +64,11 @@ Utilize os prompts dentro do link do `Notion` fornecido na parte de `Materiais` 
 - 🤖 2. Use os prompts de roteiro gerados pelo chatgpt no  `ElevenLabs`
 - 🤖 3. Use os prompts de artes no `leonardoAi`
 
+## ✅ Podcast - Código Oculto - Os segredos do lado ninja da tecnologia
+
+- [Link do Site]()
+- [Link do podcast no SoundCloud](https://soundcloud.com/julio-cesar-de-oliveira-resende/codigo-oculto-os-segredos-do-lado-ninja-da-tecnologia-ep01)
+
 ## 👨‍💻 Expert
 
 <p>
