@@ -75,17 +75,17 @@ Utilize os prompts dentro do link do `Notion` fornecido na parte de `Materiais` 
     />
     <p>&nbsp&nbsp&nbspNinjaDev<br>
     &nbsp&nbsp&nbsp
-    <a href="https://github.com/julioresende77" target="_blank" rel="noopener noreferrer">
+    <a href="https://github.com/julioresende77">
         GitHub
     </a>
     &nbsp;|&nbsp;
     <a 
-        href="https://www.linkedin.com/in/resendedev/" target="_blank" rel="noopener noreferrer">
+        href="https://www.linkedin.com/in/resendedev/">
         LinkedIn
     </a>
     &nbsp;|&nbsp;
     <a 
-        href="https://www.instagram.com/resendedev/" target="_blank" rel="noopener noreferrer">
+        href="https://www.instagram.com/resendedev/">
         Instagram
     </a>
     &nbsp;|&nbsp;</p>
